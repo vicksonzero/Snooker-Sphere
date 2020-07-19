@@ -414,3 +414,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionClip: {fileID: 8300000, guid: f3bb03e35c5c527468f4528f657db7df, type: 3}
+  collisionWallClip: {fileID: 8300000, guid: b13c719d138fe014b87366c4a77077f7, type: 3}

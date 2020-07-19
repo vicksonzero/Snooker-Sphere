@@ -3,6 +3,7 @@
 public class BBall : MonoBehaviour
 {
     public AudioClip collisionClip;
+    public AudioClip collisionWallClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,11 @@ public class BBall : MonoBehaviour
     {
         if (collision.transform.GetComponent<BBall>() != null)
         {
-            AudioSource.PlayClipAtPoint(collisionClip, collision.GetContact(0).point);
+            AudioSource.PlayClipAtPoint(collisionClip, collision.GetContact(0).point, 1);
+        }
+        if (collision.transform.GetComponent<BWall>() != null)
+        {
+            AudioSource.PlayClipAtPoint(collisionWallClip, collision.GetContact(0).point, 1);
         }
     }
 }
